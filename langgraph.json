@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "agent": "./skill-agent3.py:agent"
+  },
+  "env": ".env"
+}
