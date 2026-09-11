@@ -1,0 +1,190 @@
+{
+  "track_id": "tp-01-foundations-pentatonic-loop",
+  "milestones": [
+    {
+      "id": "ms-01-foundations-tech-tuning-loop",
+      "track_id": "tp-01-foundations-pentatonic-loop",
+      "tier": 1,
+      "title": "Foundation: Technique, tuning, metronome, and basic loop",
+      "capability_ids": [
+        "cap-00-basic-technique",
+        "cap-12-timing-with-metronome",
+        "cap-06-loop-pedal-basic_operation",
+        "cap-16-tuning-stability_with_tuner",
+        "cap-15-safe_practice_ergonomics"
+      ],
+      "capability_statement": "Establish clean left- and right-hand technique, verify tuning, and operate the loop pedal to record a basic tempo-aligned loop.",
+      "why_it_matters": "A solid foundation ensures clean tone, precise timing, and safe looping before introducing pentatonic content.",
+      "target_weeks": 1,
+      "demonstration_gate": "Demonstrate clean fretting on a simple exercise, verify tuning with tuner, and record a 4-bar loop in tempo with metronome.",
+      "pass_criteria": [
+        "No buzzing or muted notes on a 4-bar exercise",
+        "Guitar stays in tune within ±2 cents for the loop duration",
+        "Loop records and plays back a 4-bar loop without noise",
+        "Metronome tempo is maintained during the loop",
+        "Ergonomics are comfortable without strain"
+      ],
+      "failure_routes": [
+        "Revisit basic technique at slower tempo; adjust hand position; retune as needed",
+        "Practice tuner usage and ensure consistent strap height",
+        "Record shorter loops and gradually extend"
+      ],
+      "unlocks": [
+        "cap-02-map-pentatonic-patterns",
+        "cap-12-timing-with-metronome"
+      ]
+    },
+    {
+      "id": "ms-02-two-position-pentatonic",
+      "track_id": "tp-01-foundations-pentatonic-loop",
+      "tier": 2,
+      "title": "Pentatonic mapping and two-position fluency",
+      "capability_ids": [
+        "cap-02-map-pentatonic-patterns",
+        "cap-03-play-two-positions",
+        "cap-04-smooth-position-transitions",
+        "cap-12-timing-with-metronome"
+      ],
+      "capability_statement": "Identify and map pentatonic patterns across the neck and play two adjacent positions with clean fingering and smooth transitions.",
+      "why_it_matters": "Two-position fluency enables flexible improvisation and navigation for looping blues.",
+      "target_weeks": 2,
+      "demonstration_gate": "Demonstrate connected pentatonic patterns across two positions with consistent tone and tempo on metronome.",
+      "pass_criteria": [
+        "Accurate fingerings for both positions with minimal string noise",
+        "Seamless transitions without losing tonal center",
+        "Tone remains clean across both positions",
+        "Tempo maintained with metronome"
+      ],
+      "failure_routes": [
+        "Break down transitions into smaller steps; practice each position separately; slower tempo",
+        "Check posture; adjust fretting pressure"
+      ],
+      "unlocks": [
+        "cap-04-smooth-position-transitions"
+      ]
+    },
+    {
+      "id": "ms-03-loop_rhythm_basic_lead",
+      "track_id": "tp-01-foundations-pentatonic-loop",
+      "tier": 3,
+      "title": "Loop rhythm and first lead over loop",
+      "capability_ids": [
+        "cap-06-loop-pedal-basic_operation",
+        "cap-07-record_loop_basic",
+        "cap-12-timing-with-metronome",
+        "cap-16-tuning-stability_with_tuner",
+        "cap-10-add-melodic-phrase_over_loop"
+      ],
+      "capability_statement": "Record a rhythm loop and add an initial melodic pentatonic phrase over it, staying in key at a moderate tempo.",
+      "why_it_matters": "Integrates looping with melodic content to begin real improvisation within loop context.",
+      "target_weeks": 3,
+      "demonstration_gate": "Record a 4-bar rhythm loop and an 8-bar pentatonic phrase over it, in time with the metronome and with stable tuning.",
+      "pass_criteria": [
+        "Rhythm loop plays cleanly for at least 4 bars",
+        "Melodic pentatonic phrase uses patterns across positions with correct fingering",
+        "Phrase stays in key and in time with loop",
+        "Tuning remains stable during phrase"
+      ],
+      "failure_routes": [
+        "Divide into separate rhythm and melody practice; slow tempo; ensure loop start alignment",
+        "Retune if pitch drifts; adjust dynamics"
+      ],
+      "unlocks": [
+        "cap-08-overdub_loop_simple",
+        "cap-11-improvise-blues_8_12_bars"
+      ]
+    },
+    {
+      "id": "ms-04-overdub_layering",
+      "track_id": "tp-01-foundations-pentatonic-loop",
+      "tier": 4,
+      "title": "Overdub and layering: rhythm + lead",
+      "capability_ids": [
+        "cap-08-overdub_loop_simple",
+        "cap-09-layer_rhythm_lead_loops",
+        "cap-14-tone-control",
+        "cap-21-use_voice_leading_with_shapes"
+      ],
+      "capability_statement": "Add a second lead layer over the loop, balance levels, and apply tone control for clean multi-layer sound.",
+      "why_it_matters": "Layering is essential for a complete looping blues context and helps manage mix clarity.",
+      "target_weeks": 4,
+      "demonstration_gate": "Produce a two-layer loop with rhythm and lead overdub in sync, exhibiting controlled levels and clear articulation.",
+      "pass_criteria": [
+        "Overdub recorded in time with rhythm loop",
+        "Two layers are audible with clear separation",
+        "Lead stays within pentatonic shapes and key",
+        "Tone remains clean with minimal noise"
+      ],
+      "failure_routes": [
+        "Mute and re-balance levels; re-record overdub",
+        "Practice muting and timing separately; slow tempo"
+      ],
+      "unlocks": [
+        "cap-11-improvise-blues_8_12_bars",
+        "cap-22-complete_loop_flow_sequence"
+      ]
+    },
+    {
+      "id": "ms-05-blues_improv_over_loop",
+      "track_id": "tp-01-foundations-pentatonic-loop",
+      "tier": 5,
+      "title": "Blues improvisation over loop (8–12 bars)",
+      "capability_ids": [
+        "cap-11-improvise-blues_8_12_bars",
+        "cap-25-tonal_center_and_key",
+        "cap-20-navigate-pentatonic-positions",
+        "cap-21-use_voice_leading_with_shapes"
+      ],
+      "capability_statement": "Improvise an 8–12 bar blues melody using pentatonic shapes over the loop, applying voice-leading and staying in key.",
+      "why_it_matters": "Achieves creative fluency and blues phrasing within looping context.",
+      "target_weeks": 6,
+      "demonstration_gate": "Perform an 8–12 bar blues solo over the loop with coherent phrasing and voice-leading.",
+      "pass_criteria": [
+        "Groove maintained throughout",
+        "Improvised line uses pentatonic shapes and voice-leading",
+        "Key and backing harmony are coherent"
+      ],
+      "failure_routes": [
+        "Back to pentatonic phrasing practice; slow tempo; analyze phrasing"
+      ],
+      "unlocks": [
+        "cap-22-complete_loop_flow_sequence"
+      ]
+    },
+    {
+      "id": "ms-06-complete_loop_flow",
+      "track_id": "tp-01-foundations-pentatonic-loop",
+      "tier": 6,
+      "title": "Complete loop flow: rhythm + lead chain",
+      "capability_ids": [
+        "cap-07-record_loop_basic",
+        "cap-08-overdub_loop_simple",
+        "cap-09-layer_rhythm_lead_loops",
+        "cap-22-complete_loop_flow_sequence",
+        "cap-23-safety_feedback",
+        "cap-27-record_analyze_loop_performance"
+      ],
+      "capability_statement": "Execute the full looping sequence: record rhythm, overdub lead, playback, and perform reflective analysis on your loop performance.",
+      "why_it_matters": "Culminates the track by integrating all prior skills into a cohesive performable flow.",
+      "target_weeks": 8,
+      "demonstration_gate": "Complete loop chain with rhythmic and lead layers, playback, and self-review of performance.",
+      "pass_criteria": [
+        "All layers in groove with synchronized playback",
+        "Dynamic shaping and phrasing evident in performance",
+        "Safety and ergonomics maintained; feedback solicited"
+      ],
+      "failure_routes": [
+        "Revisit loop flow order; adjust levels; re-record"
+      ],
+      "unlocks": []
+    }
+  ],
+  "design_rationale": [
+    "The milestones progress from foundational technique, tuning, and timing to pentatonic pattern mapping and two-position fluency, ensuring reliable fretboard navigation before introducing looping content.",
+    "Looping capabilities are introduced early enough to build confidence with rhythm and timing (milestones 1–2), then progressively integrated with rhythm recording and overdubbing (milestones 3–4).",
+    "Milestone 3 bridges technique and loop practice by pairing a rhythm track with a melodic phrase, setting the stage for layering and dynamic control in milestone 4.",
+    "Mid-track milestones emphasize safe, clean layering and tone management to create a clear, legible loop texture suitable for blues improvisation.",
+    "Milestone 5 centers blues improvisation within the looping context, leveraging voice-leading and key/stability to develop musical phrasing.",
+    "The final milestone synthesizes rhythm, lead, safety, and reflective practice into a complete loop performance, highlighting performance readiness and self-analysis for continual growth."
+  ]
+}

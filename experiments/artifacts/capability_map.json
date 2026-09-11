@@ -1,0 +1,805 @@
+{
+  "skill": "Electric guitar technique with pentatonic scales and loop pedal usage",
+  "capabilities": [
+    {
+      "id": "cap-00-basic-technique",
+      "name": "Basic guitar technique and posture",
+      "description": "Demonstrate foundational guitar handling, fretting cleanly, controlled picking, and ergonomic posture suitable for looping practice.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Holds the guitar with relaxed shoulders and proper strap height",
+        "Fingers fretting cleanly with minimal pressure",
+        "Right-hand picking is controlled and smooth",
+        "Maintains neutral wrist and back posture during practice"
+      ],
+      "prerequisite_ids": [],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 1,
+      "estimated_days_at_30_min": 7,
+      "common_failure_modes": [
+        "Tension in shoulders or back causing discomfort",
+        "Muted or buzzed notes due to poor fretting",
+        "Poor picking technique leading to inconsistent tone"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "cap-01-identify-root-notes",
+      "name": "Identify pentatonic root notes on neck",
+      "description": "Recognize and name the root notes that anchor pentatonic shapes across the fretboard.",
+      "category": "knowledge",
+      "observable_behaviors": [
+        "Names root notes on given shapes",
+        "Points to root notes on neck diagrams or on the fretboard",
+        "Explains how root notes define key for pentatonic shapes"
+      ],
+      "prerequisite_ids": [
+        "cap-00-basic-technique"
+      ],
+      "evidence_types": [
+        "note",
+        "video",
+        "witness"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 5,
+      "common_failure_modes": [
+        "Confusing root notes between major/minor contexts",
+        "Incorrectly labeling root notes leading to miskeyed improvisation"
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "cap-02-map-pentatonic-patterns",
+      "name": "Map five pentatonic patterns across the neck",
+      "description": "Know and connect the five pentatonic positions (patterns) and map their location on the neck.",
+      "category": "knowledge",
+      "observable_behaviors": [
+        "Recites or sketches the five pentatonic patterns",
+        "Can locate patterns across strings without hesitation",
+        "Demonstrates movable shapes with correct fingering"
+      ],
+      "prerequisite_ids": [
+        "cap-00-basic-technique",
+        "cap-01-identify-root-notes"
+      ],
+      "evidence_types": [
+        "note",
+        "video",
+        "reading"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 12,
+      "common_failure_modes": [
+        "Patterns viewed in isolation without neck-spread awareness",
+        "Misconnecting patterns across string sets"
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "cap-03-play-two-positions",
+      "name": "Play pentatonic in two positions with clean tone",
+      "description": "Execute pentatonic scales across two adjacent positions with accurate fingering and consistent tone.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Clean tone across both positions",
+        "Accurate fingering with minimal string noise",
+        "Stable intonation within each position"
+      ],
+      "prerequisite_ids": [
+        "cap-02-map-pentatonic-patterns",
+        "cap-00-basic-technique"
+      ],
+      "evidence_types": [
+        "video",
+        "audio",
+        "note"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 10,
+      "common_failure_modes": [
+        "Tension causing muffled notes",
+        "Inconsistent tone between positions",
+        "Wrong fingering leading to ringing notes"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "cap-04-smooth-position-transitions",
+      "name": "Smooth transitions between pentatonic positions",
+      "description": "Move fluidly between pentatonic positions while preserving key and fingerings.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Seamless shifts between positions at moderate tempo",
+        "No loss of tonal center while moving positions",
+        "Controlled right-hand picking during transitions"
+      ],
+      "prerequisite_ids": [
+        "cap-03-play-two-positions",
+        "cap-02-map-pentatonic-patterns"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 14,
+      "common_failure_modes": [
+        "Dead spots during transitions",
+        "Tuning drift during movement",
+        "Unclear tonal center when shifting positions"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "cap-05-key-stability",
+      "name": "Maintain key/stability during improvisation",
+      "description": "Stay in the chosen key while using pentatonic shapes during improvisation.",
+      "category": "timing",
+      "observable_behaviors": [
+        "Keeps tonal center despite licks",
+        "Uses scale positions without wandering into outside keys",
+        "Demonstrates correct note choices within the key"
+      ],
+      "prerequisite_ids": [
+        "cap-04-smooth-position-transitions",
+        "cap-02-map-pentatonic-patterns"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 8,
+      "common_failure_modes": [
+        "Drift outside key during improvisation",
+        "Overreliance on single position breaks key coherence"
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "cap-06-loop-pedal-basic_operation",
+      "name": "Loop pedal: basic operation",
+      "description": "Power on, navigate basic functions (record, overdub, playback) on a loop pedal.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Turns pedal on/off",
+        "Initiates a loop with a clear count-in",
+        "Uses record and playback at appropriate times"
+      ],
+      "prerequisite_ids": [
+        "cap-00-basic-technique",
+        "cap-12-control-timing-with-metronome"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 7,
+      "common_failure_modes": [
+        "Mis-timed start of loop",
+        "Failure to arm overdubs correctly",
+        "Memory recall issues on pedal"
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "cap-07-record_loop_basic",
+      "name": "Record a basic looping track",
+      "description": "Create a first loop track (rhythm or bass-like) for backing.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Single-layer loop recorded on beat 1",
+        "Loop plays back cleanly without unintended noise",
+        "Able to listen to the loop while playing along"
+      ],
+      "prerequisite_ids": [
+        "cap-06-loop-pedal-basic_operation",
+        "cap-12-control-timing-with-metronome"
+      ],
+      "evidence_types": [
+        "video",
+        "audio",
+        "witness"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 9,
+      "common_failure_modes": [
+        "Loop timing drift",
+        "Rumbling or noise from strings not muted correctly"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "cap-08-overdub_loop_simple",
+      "name": "Overdub a second layer on loop",
+      "description": "Add a melodic or rhythmic layer over an existing loop.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Records overdub in sync with existing loop",
+        "Maintains timing and muting to avoid clutter",
+        "Balances volume between layers"
+      ],
+      "prerequisite_ids": [
+        "cap-07-record_loop_basic",
+        "cap-06-loop-pedal-basic_operation"
+      ],
+      "evidence_types": [
+        "video",
+        "audio",
+        "witness"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 12,
+      "common_failure_modes": [
+        "Overlapping strings causing noise",
+        "Overdubs out of time or too loud"
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "cap-09-layer_rhythm_lead_loops",
+      "name": "Layer rhythm and lead loops",
+      "description": "Create a simple multi-layer backing by adding rhythm and lead loops.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Two or more loops running simultaneously",
+        "Clear separation of rhythm and lead parts",
+        "Aligned loops in time with metronome"
+      ],
+      "prerequisite_ids": [
+        "cap-08-overdub_loop_simple",
+        "cap-06-loop-pedal-basic_operation"
+      ],
+      "evidence_types": [
+        "video",
+        "audio",
+        "witness"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 14,
+      "common_failure_modes": [
+        "Muddiness from too many layers",
+        "Inadequate muting causing unwanted noise"
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "cap-10-add-melodic-phrase_over_loop",
+      "name": "Add melodic pentatonic phrase over loop",
+      "description": "Improvise a melodic phrase over the looped backing track.",
+      "category": "creativity",
+      "observable_behaviors": [
+        "Improvises 8–12 bars using pentatonic shapes",
+        "Phrasing fits the groove and key",
+        "Demonstrates motif development over time"
+      ],
+      "prerequisite_ids": [
+        "cap-05-key-stability",
+        "cap-09-layer_rhythm_lead_loops"
+      ],
+      "evidence_types": [
+        "video",
+        "audio",
+        "note"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 14,
+      "common_failure_modes": [
+        "Phrases clash with backing track",
+        "Lack of melodic development across bars"
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "cap-11-improvise-blues_8_12_bars",
+      "name": "Blues improvisation over loop (8–12 bars)",
+      "description": "Create a blues melodic phrase using pentatonic shapes over the looped track.",
+      "category": "creativity",
+      "observable_behaviors": [
+        "Produces an 8–12 bar blues line",
+        "Uses call-and-response or motif development",
+        "Stays within the blues pentatonic framework"
+      ],
+      "prerequisite_ids": [
+        "cap-10-add-melodic-phrase_over_loop",
+        "cap-02-map-pentatonic-patterns"
+      ],
+      "evidence_types": [
+        "video",
+        "audio",
+        "witness"
+      ],
+      "tier_hint": 4,
+      "estimated_days_at_30_min": 16,
+      "common_failure_modes": [
+        "Loss of groove or time on blues phrasing",
+        "Overuse of same lick",
+        "Not clearly in key"
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "cap-12-timing-with-metronome",
+      "name": "Timing control with metronome",
+      "description": "Practice scales and improvisation aligned to a metronome; subdivide beats.",
+      "category": "timing",
+      "observable_behaviors": [
+        "Able to play scales over metronome at target tempo",
+        "Maintains consistent subdivisions (eighths/ quarters)",
+        "Tempo increases gradually without losing accuracy"
+      ],
+      "prerequisite_ids": [
+        "cap-00-basic-technique",
+        "cap-04-smooth-position-transitions"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "gps"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 7,
+      "common_failure_modes": [
+        "Metronome-induced tension",
+        "Tempo drift during improvisation"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "cap-13-backing_track_context_blues",
+      "name": "Backing track context for blues",
+      "description": "Explain and apply pentatonic ideas within blues backing tracks.",
+      "category": "knowledge",
+      "observable_behaviors": [
+        "Describes blues structure (12-bar)",
+        "Chooses pentatonic shapes appropriate to the key",
+        "Practices improvisation over blues backing track"
+      ],
+      "prerequisite_ids": [
+        "cap-12-timing-with-metronome",
+        "cap-05-key-stability"
+      ],
+      "evidence_types": [
+        "note",
+        "video",
+        "witness"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 6,
+      "common_failure_modes": [
+        "Incorrect blues form application",
+        "Overcomplicating improvisation without groove"
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "cap-14-tone-control",
+      "name": "Tone control and clean input",
+      "description": "Dial in clean tone and manage input for loop playback.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Maintains clean signal with minimal noise",
+        "Uses volume/tade control to balance loops",
+        "Avoids excessive feedback or distortion"
+      ],
+      "prerequisite_ids": [
+        "cap-03-play-two-positions",
+        "cap-06-loop-pedal-basic_operation"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 8,
+      "common_failure_modes": [
+        "Noise from improper grounding",
+        "Excessive gain causing hiss or feedback"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "cap-15-safe_practice_ergonomics",
+      "name": "Safe practice and ergonomics for looping",
+      "description": "Implement breaks, posture awareness, and safe loop usage to prevent strain.",
+      "category": "perception",
+      "observable_behaviors": [
+        "Takes regular breaks during 30 min sessions",
+        "Maintains ergonomic posture and strap setup",
+        "Recognizes early signs of strain and adjusts technique"
+      ],
+      "prerequisite_ids": [
+        "cap-00-basic-technique",
+        "cap-16-tuning-stability-with-tuner"
+      ],
+      "evidence_types": [
+        "note",
+        "video",
+        "witness"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 5,
+      "common_failure_modes": [
+        "Repetitive strain injuries",
+        "Posture-induced discomfort"
+      ],
+      "confidence": 0.89
+    },
+    {
+      "id": "cap-16-tuning-stability_with-tuner",
+      "name": "Tuning stability and tuner usage",
+      "description": "Tune the guitar accurately and maintain tuning during practice.",
+      "category": "knowledge",
+      "observable_behaviors": [
+        "Uses tuner to verify pitch",
+        "Re-tunes as needed between phrases",
+        "Maintains pitch stability during loops"
+      ],
+      "prerequisite_ids": [
+        "cap-00-basic-technique"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 1,
+      "estimated_days_at_30_min": 6,
+      "common_failure_modes": [
+        "Untuned pitch drift during looping",
+        "Over-tightening or poor bridge setup affecting intonation"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "cap-17-different-keys-tempos_expand",
+      "name": "Expand across different keys and tempos",
+      "description": "Apply pentatonic shapes to new keys and varied tempos.",
+      "category": "transfer",
+      "observable_behaviors": [
+        "Transposes pentatonic shapes to a new key",
+        "Keeps groove and phrasing at faster/slower tempos",
+        "Maintains accuracy while adapting fingering"
+      ],
+      "prerequisite_ids": [
+        "cap-04-smooth-position-transitions",
+        "cap-12-timing-with-metronome"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "gps"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 18,
+      "common_failure_modes": [
+        "Key changes disrupt tonal center",
+        "Tempo changes cause timing drift"
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "cap-18-muting-articulation-in-loop",
+      "name": "Muting and articulation in loop context",
+      "description": "Use muting techniques to maintain clean loop layers and articulate notes clearly.",
+      "category": "technique",
+      "observable_behaviors": [
+        "Left-hand muting to control noise between notes",
+        "Right-hand muting to separate phrases",
+        "Clear articulation without accidental string noise in loops"
+      ],
+      "prerequisite_ids": [
+        "cap-09-layer_rhythm_lead_loops",
+        "cap-03-play-two-positions"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 10,
+      "common_failure_modes": [
+        "Unmuted strings causing muddiness",
+        "Overly aggressive muting reducing tone"
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "cap-19-avoid_muddiness_overdub_limit",
+      "name": "Avoid muddiness when overdubbing multiple layers",
+      "description": "Limit layers and manage levels to keep groove clear.",
+      "category": "judgment",
+      "observable_behaviors": [
+        "Plans overdub order to avoid crowding",
+        "Balances volume across loops",
+        "Assessment and adjustment of layering depth"
+      ],
+      "prerequisite_ids": [
+        "cap-08-overdub_loop_simple",
+        "cap-09-layer_rhythm_lead_loops"
+      ],
+      "evidence_types": [
+        "note",
+        "video",
+        "witness"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 12,
+      "common_failure_modes": [
+        "Too many layers causing mud",
+        "Poor level control obscuring lead lines"
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "cap-20-navigate-pentatonic-positions",
+      "name": "Navigate pentatonic positions across neck",
+      "description": "Connect pentatonic shapes across neck for seamless playing.",
+      "category": "knowledge",
+      "observable_behaviors": [
+        "Describes voice-leading across neck",
+        "Moves fluidly across multiple positions while staying in key",
+        "Maintains melodic contour across transitions"
+      ],
+      "prerequisite_ids": [
+        "cap-02-map-pentatonic-patterns",
+        "cap-04-smooth-position-transitions"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "reading"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 15,
+      "common_failure_modes": [
+        "Fragmented lines across neck",
+        "Loss of tonal center during long phrases"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "cap-21-use_voice_leading_with_shapes",
+      "name": "Voice-leading with pentatonic shapes",
+      "description": "Apply melodic voice-leading when moving through pentatonic shapes to create connected lines.",
+      "category": "creativity",
+      "observable_behaviors": [
+        "Creates smooth melodic lines across shapes",
+        "Maintains emphasis on root and chord tones",
+        "Demonstrates musical phrasing bridges between shapes"
+      ],
+      "prerequisite_ids": [
+        "cap-20-navigate-pentatonic-positions",
+        "cap-05-key-stability"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 4,
+      "estimated_days_at_30_min": 14,
+      "common_failure_modes": [
+        "Stuttering or jumping between shapes",
+        "Lack of directional motion in lines"
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "cap-22-complete_loop_flow_sequence",
+      "name": "Complete loop flow: rhythm + lead chain",
+      "description": "Execute a full sequence: record rhythm, overdub lead, playback, and switch to performance mode.",
+      "category": "timing",
+      "observable_behaviors": [
+        "Rhythm loop plays in sync with lead overdub",
+        "Timing is consistent across play/overdub cycles",
+        "Able to start playback cleanly without lag"
+      ],
+      "prerequisite_ids": [
+        "cap-07-record_loop_basic",
+        "cap-08-overdub_loop_simple",
+        "cap-09-layer_rhythm_lead_loops"
+      ],
+      "evidence_types": [
+        "video",
+        "audio",
+        "witness"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 14,
+      "common_failure_modes": [
+        "Desynchronization between layers",
+        "Ghost notes or stray ticks during playback"
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "cap-23-safety-feedback",
+      "name": "Safety and feedback during loop practice",
+      "description": "Monitor safety and respond to feedback from peers or observers about technique and setup.",
+      "category": "communication",
+      "observable_behaviors": [
+        "Solicits feedback from peers or instructor",
+        "Adjusts technique based on feedback",
+        "Reports any discomfort or pain promptly"
+      ],
+      "prerequisite_ids": [
+        "cap-15-safe_practice_ergonomics",
+        "cap-00-basic-technique"
+      ],
+      "evidence_types": [
+        "witness",
+        "note",
+        "video"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 7,
+      "common_failure_modes": [
+        "Ignoring safety signals",
+        "Poor incorporation of feedback"
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "cap-24-timing-drift-assessment",
+      "name": "Assess and adjust timing drift",
+      "description": "Identify timing drift in loops and improvisation and correct it.",
+      "category": "timing",
+      "observable_behaviors": [
+        "Detects timing drift with metronome and loops",
+        "Adjusts tempo or phrasing to re-align with beat",
+        "Re-records sections to restore groove"
+      ],
+      "prerequisite_ids": [
+        "cap-12-timing-with-metronome",
+        "cap-22-complete_loop_flow_sequence"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 3,
+      "estimated_days_at_30_min": 10,
+      "common_failure_modes": [
+        "Late or early notes causing groove break",
+        "Inconsistent tempo across measures"
+      ],
+      "confidence": 0.81
+    },
+    {
+      "id": "cap-25-tonal-center_and_key",
+      "name": "Tonal center and key recognition",
+      "description": "Identify the tonal center and key for a given pentatonic pattern or blues backing track.",
+      "category": "knowledge",
+      "observable_behaviors": [
+        "Names key and scales used in a track",
+        "Chooses appropriate pentatonic shapes for the key",
+        "Demonstrates consistent application of scale tones"
+      ],
+      "prerequisite_ids": [
+        "cap-01-identify-root-notes",
+        "cap-12-timing-with-metronome"
+      ],
+      "evidence_types": [
+        "note",
+        "video",
+        "reading"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 9,
+      "common_failure_modes": [
+        "Misidentifying key leading to wrong shapes",
+        "Failure to align with backing track harmony"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "cap-26-ergonomic-warmups",
+      "name": "Ergonomic warmups for loop sessions",
+      "description": "Perform warmups focusing on hand/wrist alignment to reduce strain during looping.",
+      "category": "perception",
+      "observable_behaviors": [
+        "Completes a short warmup sequence",
+        "Maintains relaxed hands and wrists during practice",
+        "Notices early signs of fatigue and adjusts routine"
+      ],
+      "prerequisite_ids": [
+        "cap-00-basic-technique",
+        "cap-15-safe_practice_ergonomics"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "witness"
+      ],
+      "tier_hint": 2,
+      "estimated_days_at_30_min": 6,
+      "common_failure_modes": [
+        "Neglecting warmups leading to strain",
+        "Skipping rests during loops"
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "cap-27-record_analyze_loop_performance",
+      "name": "Record and analyze loop performance",
+      "description": "Record practice sessions and assess performance for improvement.",
+      "category": "transfer",
+      "observable_behaviors": [
+        "Records a session and stores for review",
+        "Notes specific improvements and actions",
+        "Implements changes in next practice based on analysis"
+      ],
+      "prerequisite_ids": [
+        "cap-22-complete_loop_flow_sequence",
+        "cap-25-tonal-center_and_key"
+      ],
+      "evidence_types": [
+        "video",
+        "note",
+        "reading",
+        "witness"
+      ],
+      "tier_hint": 4,
+      "estimated_days_at_30_min": 16,
+      "common_failure_modes": [
+        "Failure to capture useful data",
+        "Ignoring review insights"
+      ],
+      "confidence": 0.79
+    },
+    {
+      "id": "cap-28-creative_dynamics_control",
+      "name": "Dynamic control and phrasing variety",
+      "description": "Use dynamics, articulation, and phrasing to color pentatonic lines within blues context.",
+      "category": "creativity",
+      "observable_behaviors": [
+        "Uses volume/picking dynamics to shape phrases",
+        "Applies accents and pauses for color",
+        "Explores effects of phrasing variety over loops"
+      ],
+      "prerequisite_ids": [
+        "cap-11-improvise-blues_8_12_bars",
+        "cap-14-tone-control"
+      ],
+      "evidence_types": [
+        "video",
+        "audio",
+        "note"
+      ],
+      "tier_hint": 4,
+      "estimated_days_at_30_min": 14,
+      "common_failure_modes": [
+        "Flat dynamics lacking contrast",
+        "Over-usage of same phrase without variation"
+      ],
+      "confidence": 0.81
+    }
+  ],
+  "assumptions": [
+    "Practices 30 minutes per day, 5 days per week",
+    "Access to loop pedal capable of recording, overdubbing, and playback",
+    "Standard tuning and basic amp settings assumed",
+    "Practice environment allows use of a metronome",
+    "No external performance requirement during the horizon"
+  ],
+  "unresolved_questions": [
+    "Exact sequencing order for beginners can vary between curricula; some sources emphasize five-position system while others discuss two-position drills initially.",
+    "Hardware details of loop pedals differ (memory, overdub capabilities) and may affect practice workflows; specific loop device features cited across sources vary.",
+    "Some sources are community forums or blog posts; their guidance may be less authoritative than Berklee/JustinGuitar pages.",
+    "How aggressively should one emphasize ergonomics early vs. later in the horizon?",
+    "What is the optimal number of layers to minimize muddiness for a beginner in an 8-week horizon?"
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "milestone_id": "ms-02-two-position-pentatonic",
+  "quests": [
+    {
+      "id": "quest-ms02-01-drill-2pos-fluency",
+      "milestone_id": "ms-02-two-position-pentatonic",
+      "quest_type": "drill",
+      "title": "Two-position pentatonic fluency drill",
+      "purpose": "Develop clean fingering and seamless transitions between two adjacent pentatonic positions across the neck, staying in the chosen key.",
+      "instructions": [
+        "Set a metronome to 80 BPM.",
+        "Choose a key (A major) and use pentatonic patterns 1 and 2 across positions 1 and 2.",
+        "Perform a continuous run, transitioning from position 1 to position 2 without pausing on the split.",
+        "Record a 60-second take and note any slips or string noise during transitions."
+      ],
+      "estimated_days": 2,
+      "sessions": 3,
+      "minutes_per_session": 30,
+      "success_criteria": [
+        "Clean fingerings for both positions with minimal string noise",
+        "Smooth transitions between the two positions at the target tempo",
+        "Keep the tonal center in the selected key throughout the take",
+        "Tempo remains steady on metronome during the run"
+      ],
+      "evidence_required": [
+        {
+          "type": "video",
+          "purpose": "Proof of two-position fluency with clean tone",
+          "duration_seconds": 60,
+          "must_show": [
+            "Two-position pentatonic patterns played across neck",
+            "No extended pauses between positions",
+            "Clean tone across both positions"
+          ]
+        }
+      ],
+      "resource_url": "https://www.justinguitar.com/guitar-lessons/major-pentatonic-the-five-patterns-sc-404",
+      "resource_reason": "Reference for major pentatonic patterns across the neck and their fingerings",
+      "twist": "Optional motif at end using both positions to demonstrate integration",
+      "failure_route": "If not passing, slow to 60 BPM and isolate transitions between positions; practice each position separately with clean fingering, then reattempt at original tempo.",
+      "optional": false
+    },
+    {
+      "id": "quest-ms02-02-drill-smooth-transitions",
+      "milestone_id": "ms-02-two-position-pentatonic",
+      "quest_type": "drill",
+      "title": "Smooth transitions between pentatonic positions (drill B)",
+      "purpose": "Refine fluid movement between two adjacent pentatonic positions while preserving key and tone.",
+      "instructions": [
+        "In key of A major, practice patterns 1 and 2 across positions 1 and 2.",
+        "Use a metronome set initially to 70 BPM, ensure even tone with steady pick attack.",
+        "Shift between positions with minimal neck tension and no tonal center loss.",
+        "Record a 45-second take and annotate where tone or pitch wavers are observed."
+      ],
+      "estimated_days": 2,
+      "sessions": 2,
+      "minutes_per_session": 25,
+      "success_criteria": [
+        "Seamless transitions between positions with no tonal center drift",
+        "Consistent tone across both shapes",
+        "Tempo maintained within ±2 BPM of the metronome",
+        "No unintended string noise during shifts"
+      ],
+      "evidence_required": [
+        {
+          "type": "video",
+          "purpose": "Showcase smooth transitions with clear tone",
+          "duration_seconds": 45,
+          "must_show": [
+            "Transition flow between positions 1 and 2",
+            "Even tone across both shapes",
+            "Key stays anchored"
+          ]
+        }
+      ],
+      "resource_url": "https://www.justinguitar.com/guitar-lessons/major-pentatonic-the-five-patterns-sc-404",
+      "resource_reason": "Provides fingering and layout for pentatonic shapes across neck",
+      "twist": "End with a 4-bar motif that moves from position 1 to position 2",
+      "failure_route": "If transitions fail, practice the two positions as separate drills at a slower tempo (60 BPM), then rejoin for a second attempt at 70 BPM.",
+      "optional": false
+    },
+    {
+      "id": "quest-ms02-03-drill-second-key",
+      "milestone_id": "ms-02-two-position-pentatonic",
+      "quest_type": "drill",
+      "title": "Two-position pentatonic drill in a second key (transfer test)",
+      "purpose": "Test two-position fluency in a new key to ensure shapes transfer across keys.",
+      "instructions": [
+        "Set key to E major; use pentatonic patterns 2 and 3 across positions 2 and 3.",
+        "Play a continuous run, maintaining clean fingering and tone.",
+        "Increase tempo gradually from 70 BPM to 90 BPM as accuracy improves.",
+        "Record a 60-second take and note any fingering changes needed for the second key."
+      ],
+      "estimated_days": 2,
+      "sessions": 2,
+      "minutes_per_session": 30,
+      "success_criteria": [
+        "Accurate fingering in the new key for both positions",
+        "Smooth transitions between positions 2 and 3",
+        "Key center maintained throughout the run",
+        "Tempo progression at or below target without sacrificing tone"
+      ],
+      "evidence_required": [
+        {
+          "type": "video",
+          "purpose": "Demonstrate two-position fluency in a new key",
+          "duration_seconds": 60,
+          "must_show": [
+            "Two-position patterns across neck in E major",
+            "Stable tone across both shapes",
+            "Metronome-aligned tempo"
+          ]
+        },
+        {
+          "type": "audio",
+          "purpose": "Audio evidence of accurate pitch and tone",
+          "duration_seconds": 60,
+          "must_show": [
+            "Clear audio without crackling or noise during transitions"
+          ]
+        }
+      ],
+      "resource_url": "https://www.weisspentatonic-001",
+      "resource_reason": "Offers neck-wide pentatonic patterns and key mapping suitable for transfer practice",
+      "twist": "Include a short 8-bar blues phrase that uses both positions",
+      "failure_route": "If not passing, revert to drill 1 in A major to rebuild confidence and reattempt the transfer in E major after additional practice",
+      "optional": false
+    },
+    {
+      "id": "quest-ms02-04-discovery-neck-map",
+      "milestone_id": "ms-02-two-position-pentatonic",
+      "quest_type": "discovery",
+      "title": "Neck pentatonic map discovery and peer sharing",
+      "purpose": "Create and share a neck map showing all five pentatonic patterns and their connections across the neck; gather feedback.",
+      "instructions": [
+        "Sketch or photograph the neck map showing all five pentatonic patterns and their connectors.",
+        "Label the root notes and keys anchors; note how two adjacent patterns connect.",
+        "Publish image with a short caption describing how you navigate between two positions and any challenges.",
+        "Seek feedback from peers or instructor and summarize actionable insights."
+      ],
+      "estimated_days": 2,
+      "sessions": 2,
+      "minutes_per_session": 30,
+      "success_criteria": [
+        "Neck map clearly shows all five pentatonic patterns across strings",
+        "Root notes and key anchors are labeled correctly",
+        "Feedback is obtained from at least one peer or instructor and documented"
+      ],
+      "evidence_required": [
+        {
+          "type": "photo",
+          "purpose": "Neck map photo with labeled patterns",
+          "duration_seconds": 60,
+          "must_show": [
+            "All five patterns mapped across strings",
+            "Root notes labeled clearly"
+          ]
+        },
+        {
+          "type": "video",
+          "purpose": "Brief walkthrough explanation of neck map",
+          "duration_seconds": 60,
+          "must_show": [
+            "Narration or captions describing two-position fluency in the map"
+          ]
+        }
+      ],
+      "resource_url": "https://weissguitar.com/pentatonic-scale",
+      "resource_reason": "Provides guidance on pentatonic neck mapping and voice-leading across patterns",
+      "twist": "Color-code patterns to reflect movable shapes for easier navigation",
+      "failure_route": "If the neck map is unclear or lacks labels, redo the map with proper string references and labels, then reshare for feedback",
+      "optional": false
+    },
+    {
+      "id": "quest-ms02-05-demonstration",
+      "milestone_id": "ms-02-two-position-pentatonic",
+      "quest_type": "demonstration",
+      "title": "Demonstration: two-position pentatonic fluency over metronome (gate test)",
+      "purpose": "Directly test the milestone demonstration gate for two-position fluency with proper timing and tuning.",
+      "instructions": [
+        "Prepare a 90-second demonstration of connected pentatonic patterns across two adjacent positions in a selected key (A or E).",
+        "Clearly state the key and positions at the start; play with a steady metronome (80 BPM).",
+        "Include an 8–12 bar blues phrase using the two shapes to show improvisation within the pentatonic framework.",
+        "Ensure clean tone, minimal string noise, and accurate fingering across both positions."
+      ],
+      "estimated_days": 2,
+      "sessions": 1,
+      "minutes_per_session": 40,
+      "success_criteria": [
+        "Clear demonstration of connected two-position pentatonic phrases across the neck",
+        "Key center and tempo are maintained throughout the demonstration",
+        "Two-position transitions are seamless and musically coherent",
+        "Demonstration includes a blues phrase from the two shapes with proper phrasing"
+      ],
+      "evidence_required": [
+        {
+          "type": "video",
+          "purpose": "Gate-level demonstration video for two-position fluency",
+          "duration_seconds": 90,
+          "must_show": [
+            "Two positions connected smoothly",
+            "Consistent tone across shapes",
+            "Tempo kept with metronome"
+          ]
+        },
+        {
+          "type": "witness",
+          "purpose": "Instructor observation and pass/fail assessment",
+          "duration_seconds": 60,
+          "must_show": [
+            "Accurate fingering across both positions",
+            "No drift in tonal center despite transitions"
+          ]
+        }
+      ],
+      "resource_url": "https://justinguitar.com/guitar-lessons/major-pentatonic-the-five-patterns-sc-404",
+      "resource_reason": "Direct gate material for two-position pentatonic fluency with explicit fingering",
+      "twist": "Narrate fingering choices during the transition to demonstrate understanding",
+      "failure_route": "If the gate is not passed, schedule a corrective demo after practicing drills 1–3 and receiving instructor feedback",
+      "optional": false
+    }
+  ],
+  "design_notes": [
+    "The milestone ms-02-two-position-pentatonic emphasizes mapping pentatonic patterns across the neck and achieving fluency between two adjacent positions.",
+    "Quests 1–3 target drill-based skill-building for fingering, transitions, and timing with metronome.",
+    "Quest 4 encourages collaborative discovery and external feedback through neck-map sharing to reinforce neck connectivity.",
+    "Quest 5 demonstrates the gate for the milestone, ensuring observable proof of two-position fluency, tone control, and metronome-timed phrasing.",
+    "Resources center on JustinGuitar and WeissGuitar pentatonic pattern maps to ground practice in credible pedagogy.",
+    "Twists are designed to increase challenge without altering core requirements."
+  ]
+}

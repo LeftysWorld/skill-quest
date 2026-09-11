@@ -1,0 +1,44 @@
+{
+  "id": "ldg-EG-8W-01",
+  "goal_id": "EG-8W-01",
+  "title": "Foundations: Pentatonic Mastery and Loop Pedal Integration (8 weeks)",
+  "skill": "Electric guitar technique with pentatonic scales and loop pedal usage",
+  "north_star_capability": "Be able to freely play melodies using pentatonic scales on the electric guitar and use a loop pedal to create backing tracks and harmonies for blues riffs.",
+  "selected_track_id": "tp-01-foundations-pentatonic-loop",
+  "alternate_track_ids": [
+    "tp-02-blues-improv-loop",
+    "tp-03-loop-performance"
+  ],
+  "milestone_ids": [
+    "ms-01-foundations-tech-tuning-loop",
+    "ms-02-two-position-pentatonic",
+    "ms-03-loop_rhythm_basic_lead",
+    "ms-04-overdub_layering",
+    "ms-05-blues_improv_over_loop",
+    "ms-06-complete_loop_flow"
+  ],
+  "branch_points": [
+    "cap-04-smooth-position-transitions",
+    "cap-11-improvise-blues_8_12_bars",
+    "cap-22-complete_loop_flow_sequence"
+  ],
+  "target_weeks": 8,
+  "minutes_per_day": 30,
+  "sources": [
+    "Major Pentatonic: The Five Patterns | JustinGuitar.com",
+    "Minor Pentatonic: The 5 Patterns | JustinGuitar.com",
+    "Pentatonic Scale Guitar: Complete Guide Beyond the Box",
+    "A Live Looping Lesson - Premier Guitar",
+    "A Guide to Loopers and How to Use Them - Acoustic Guitar",
+    "4 EASY Ways To Use A Metronome And Practice Guitar - YouTube",
+    "The Essentials of Guitar Ergonomics: Pain-Free Playing - Kyser"
+  ],
+  "assumptions": [
+    "Practices 30 minutes per day, 5 days per week, for 8 weeks.",
+    "Access to a loop pedal capable of recording, overdubbing, and playback.",
+    "Standard tuning and basic amp settings assumed.",
+    "Practice environment allows use of a metronome.",
+    "No external performance requirement during the horizon."
+  ],
+  "version": 1
+}

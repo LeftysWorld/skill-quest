@@ -17,12 +17,15 @@ load_dotenv()
 
 tavily_client = TavilyClient()
 
+# ---------- Tools ----------
 
 @tool
 def web_search(query: str) -> Dict[str, Any]:
     """Search the web for information."""
     return tavily_client.search(query)
 
+
+# ---------- Input schema ----------
 
 @dataclass
 class CurriculumContext:
@@ -37,6 +40,8 @@ class CurriculumContext:
         "electric guitar, amplifier, cable, tuner, picks, and strap"
     )
 
+
+# ---------- Prompt (middleware) ----------
 
 @dynamic_prompt
 def curriculum_prompt(request: ModelRequest) -> str:
@@ -68,6 +73,7 @@ Return exactly 6 sequential levels. For each level, provide:
 Make the progression realistic, cumulative, and safety-conscious.
 """
 
+# ---------- Agent ----------
 
 agent = create_agent(
     model="gpt-5-nano",

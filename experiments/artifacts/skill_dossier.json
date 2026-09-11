@@ -1,0 +1,253 @@
+{
+  "skill": "Electric guitar technique with pentatonic scales and loop pedal usage",
+  "scope": "Technique and practice framework for using pentatonic scales on electric guitar across the fretboard, improvising blues phrases, and creating/overdubbing backing tracks with a loop pedal. Includes development of tone, timing, and loop-based phrasing within a structured 8-week, 30 minutes/day regimen.",
+  "progression_patterns": [
+    "Learn the five pentatonic patterns/positions for major and minor scales across the neck.",
+    "Connect patterns across the fretboard using voice-leading and target root notes; practice in two-position drills with a metronome.",
+    "Develop smooth transitions between pentatonic positions while staying in the key; integrate keyboard-like fingering familiarity.",
+    "Improvise a blues phrase of 8–12 bars over a looped backing track using the pentatonic shapes.",
+    "Create a backing track on the loop pedal (rhythm or bass-like) and overdub a melodic pentatonic phrase.",
+    "Layer multiple loops (rhythm + lead) to form a simple backing arrangement; practice timing and muting techniques.",
+    "Expand in different keys and tempos; ensure stable tuning with a tuner; maintain consistent tone.",
+    "In practice sessions, incorporate ergonomics and safe practice habits to prevent strain during loop usage and fast licks."
+  ],
+  "capability_candidates": [
+    "Identify root notes and map pentatonic positions to the neck",
+    "Play pentatonic scales across two or more positions with accuracy and clean tone",
+    "Switch between pentatonic positions smoothly while maintaining key",
+    "Improvise a blues melodic phrase within 8–12 bars over a looped backing track",
+    "Record rhythm/backing on a loop pedal and overdub melodic pentatonic phrases",
+    "Layer multiple loops (rhythm, bass-like line, melody) to create a backing track",
+    "Operate a loop pedal (record, overdub, playback) and manage timing to synchronize with a metronome",
+    "Tune and maintain tuning with a tuner during practice",
+    "Apply metronome-based timing to scale practice and improvisation",
+    "Practice ergonomics: posture, neck angle, hand/wrist alignment during looping and fast phrases",
+    "Use backing tracks to contextualize pentatonic improvisation in blues style",
+    "Maintain safe practice habits to avoid strain during long loop sessions"
+  ],
+  "prerequisite_patterns": [
+    "Basic guitar technique (holding the guitar, fretting cleanly, basic picking)",
+    "Ability to tune the instrument (use of a tuner)",
+    "Comfort with a metronome and measured practice (timing fundamentals)",
+    "Understanding of standard tuning and basic amplifier setup",
+    "Ability to play single-note melodies and simple rhythms without excessive tension",
+    "Basic familiarity with backing tracks or a willingness to use a loop pedal for practice"
+  ],
+  "common_failure_modes": [
+    "Excessive tension or poor posture causing pain or injury",
+    "Incorrect fingering or poor tone when playing pentatonic patterns",
+    "Drifting outside the key or losing tonal center during improvisation",
+    "Loop timing drift or mis-timed recordings leading to a muddy groove",
+    "Overlapping or unmuted strings creating noise; poor muting and articulation",
+    "Overloading the loop with layers causing muddiness; inefficient overdub technique",
+    "Inadequate tuning maintenance leading to pitch stability problems",
+    "Reliance on a single pentatonic position instead of neck-spanning connectivity"
+  ],
+  "safety_constraints": [
+    "Maintain proper posture and avoid prolonged static positions; use a strap and adjust seating height to minimize back strain",
+    "Take regular breaks; 30-minute sessions with 5-minute rests recommended",
+    "Use a tuner to ensure stable pitch; avoid aggressive bending beyond instrument setup",
+    "Be mindful of volume/ear safety when practicing with amps or looped playback",
+    "Be aware of wrist/hand fatigue; perform warm-ups and light stretches before and after practice",
+    "If pain or numbness persists, consult healthcare professional and adjust technique/equipment as needed"
+  ],
+  "authentic_contexts": [
+    "Home practice and routine development for blues-oriented melodic playing",
+    "Blues jam sessions and collaborative practice using backing tracks",
+    "Small-venue or studio setups where looping provides a backing track for improvisation",
+    "Personal recording projects that employ loop-based layering to create multitrack blues textures",
+    "Online communities and tutorials (e.g., forum discussions about blues pentatonic improvisation)"
+  ],
+  "sources": [
+    {
+      "id": "src-justinguitar-major-404",
+      "title": "Major Pentatonic: The Five Patterns | JustinGuitar.com",
+      "url": "https://www.justinguitar.com/guitar-lessons/major-pentatonic-the-five-patterns-sc-404",
+      "source_type": "online lesson",
+      "publisher": "JustinGuitar",
+      "relevance": "Foundational pentatonic shapes and neck-wide connectivity",
+      "extracted_claims": [
+        "Pentatonic scale has five patterns/positions",
+        "Patterns are movable shapes that map across the neck",
+        "Root notes define the key",
+        "Fingerings recommended across patterns"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.85
+    },
+    {
+      "id": "src-justinguitar-minor-304",
+      "title": "Minor Pentatonic: The 5 Patterns | JustinGuitar.com",
+      "url": "https://www.justinguitar.com/guitar-lessons/minor-pentatonic-the-5-patterns-sc-304",
+      "source_type": "online lesson",
+      "publisher": "JustinGuitar",
+      "relevance": "Provides five patterns for minor pentatonic across neck",
+      "extracted_claims": [
+        "Same five notes in different positions",
+        "Patterns connect across strings",
+        "Fingerings per pattern",
+        "Useful for blues improvisation"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.82
+    },
+    {
+      "id": "src-weisspentatonic-001",
+      "title": "Pentatonic Scale Guitar: Complete Guide Beyond the Box",
+      "url": "https://weissguitar.com/pentatonic-scale",
+      "source_type": "educational article",
+      "publisher": "WeissGuitar",
+      "relevance": "Comprehensive map of pentatonic across neck and five positions; emphasis on voice leading",
+      "extracted_claims": [
+        "Five positions map the minor pentatonic across the neck",
+        "Root notes in A minor correspond to shapes",
+        "Five-note scale reused in all positions"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.84
+    },
+    {
+      "id": "src-gtricks-ptn5",
+      "title": "5 Best Ways to Play the Pentatonic Scale - Guitar Tricks Blog",
+      "url": "https://www.guitartricks.com/blog/pentatonic-scale-guitar-how-to",
+      "source_type": "blog article",
+      "publisher": "Guitar Tricks",
+      "relevance": "Pedagogical overview for learning pentatonic scales",
+      "extracted_claims": [
+        "Pentatonic scales are beginner-friendly; taught as major and minor",
+        "Two main approach: patterns to navigate across neck"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.7
+    },
+    {
+      "id": "src-berklee-basic-improv",
+      "title": "Basic Improvisation Course - Berklee Online",
+      "url": "https://online.berklee.edu/courses/basic-improvisation",
+      "source_type": "online course",
+      "publisher": "Berklee Online",
+      "relevance": "Credible pedagogy for improvisation basics",
+      "extracted_claims": [
+        "Intro to improvisation concepts",
+        "Scales and phrasing basics",
+        "Practice with backing tracks"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.75
+    },
+    {
+      "id": "src-berklee-improv-tech",
+      "title": "Guitar Improvisation Techniques Course - Berklee Online",
+      "url": "https://online.berklee.edu/courses/guitar-improvisation-techniques",
+      "source_type": "online course",
+      "publisher": "Berklee Online",
+      "relevance": "Techniques for guitar improvisation",
+      "extracted_claims": [
+        "Techniques for melodic improvisation",
+        "Blues and rock contexts",
+        "Connection to pentatonic usage"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.72
+    },
+    {
+      "id": "src-pg-loop-lesson",
+      "title": "A Live Looping Lesson",
+      "url": "https://premierguitar.com/gear/a-live-looping-lesson",
+      "source_type": "online article",
+      "publisher": "Premier Guitar",
+      "relevance": "Looping concepts for performance",
+      "extracted_claims": [
+        "Looping basics; record/overdub/playback; timing considerations"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.6
+    },
+    {
+      "id": "src-acg-looper-guide",
+      "title": "A Guide to Loopers and How to Use Them",
+      "url": "https://acousticguitar.com/a-guide-to-loopers-and-how-to-use-them",
+      "source_type": "guide article",
+      "publisher": "Acoustic Guitar",
+      "relevance": "Practical guidance on looping functions",
+      "extracted_claims": [
+        "Loopers record, overdub, playback; layering; time controls; memory options"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.78
+    },
+    {
+      "id": "src-bossrc30-tut",
+      "title": "Boss RC-30 Loop Station Tutorial",
+      "url": "https://www.youtube.com/watch?v=nsmApiFLaFo",
+      "source_type": "video tutorial",
+      "publisher": "YouTube",
+      "relevance": "Hands-on loop pedal operation",
+      "extracted_claims": [
+        "Showcases record, overdub, playback operations"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.6
+    },
+    {
+      "id": "src-met-4easymetronome",
+      "title": "4 EASY Ways To Use A Metronome And Practice Guitar",
+      "url": "https://www.youtube.com/watch?v=xdIk_nBMXwk",
+      "source_type": "video tutorial",
+      "publisher": "YouTube",
+      "relevance": "Metronome usage for timing; practice structure",
+      "extracted_claims": [
+        "Use metronome for timing; gradually increase tempo; subdivide beats; practice with scales"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.64
+    },
+    {
+      "id": "src-kyser-ergonomics",
+      "title": "The Essentials of Guitar Ergonomics: Pain-Free Playing",
+      "url": "https://kysermusical.com/blogs/news/the-essentials-of-guitar-ergonomics-pain-free-playing",
+      "source_type": "blog article",
+      "publisher": "Kyser Musical",
+      "relevance": "Ergonomics and practice safety",
+      "extracted_claims": [
+        "Posture, back straight, shoulders relaxed; avoid hunching; strap helps; avoid strain"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.7
+    },
+    {
+      "id": "src-pmc-guitar-posture",
+      "title": "Correlations between body postures and musculoskeletal pain in guitar players",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8726467",
+      "source_type": "academic article",
+      "publisher": "PMC (PubMed Central)",
+      "relevance": "Empirical evidence on ergonomics and risks",
+      "extracted_claims": [
+        "Risk factors include playing posture; ergonomic redesign can reduce pain; standing vs sitting differences; wrists extension risk"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.85
+    },
+    {
+      "id": "src-justin-blues-improv",
+      "title": "First Steps in Blues Improvisation using Minor Pentatonic Pattern 1",
+      "url": "https://community.justinguitar.com/t/first-steps-in-blues-improvisation-using-minor-pentatonic-scale-pattern-1/78164",
+      "source_type": "forum",
+      "publisher": "JustinGuitar Community",
+      "relevance": "Practical steps in improvisation with pentatonic scales over blues backing tracks",
+      "extracted_claims": [
+        "Use backing tracks; practice 12-bar blues; develop licks; move to different keys"
+      ],
+      "retrieved_at": "2026-09-11",
+      "confidence": 0.55
+    }
+  ],
+  "disagreements": [
+    "There is broad consensus on the usefulness of pentatonic five-position system for neck-spanning patterns, though some sources label positions differently (major vs minor naming and pattern numbering). Some sources include forum/blog guidance (less formal) alongside structured curricula (Berklee/JustinGuitar), which may yield variability in sequencing and emphasis."
+  ],
+  "uncertainties": [
+    "Exact sequencing order for beginners can vary between curricula; some sources emphasize five-position system while some discuss two-position drills initially.",
+    "Hardware details of loop pedals differ (memory, overdub capabilities) and may affect practice workflows; specific loop device features cited across sources vary.",
+    "Some sources are community forums or blog posts; their guidance may be less authoritative than Berklee/JustinGuitar pages."
+  ]
+}

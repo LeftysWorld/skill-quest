@@ -1,0 +1,30 @@
+{
+  "id": "EG-8W-01",
+  "skill": "Electric guitar technique with pentatonic scales and loop pedal usage",
+  "desired_outcome": "Be able to freely play melodies using pentatonic scales on the electric guitar and use a loop pedal to create backing tracks and harmonies for blues riffs.",
+  "target_context": "Practice 30 minutes per day, 5 days per week, for 8 weeks, using electric guitar, amplifier, loop pedal, tuner, cable, picks, strap.",
+  "success_definition": [
+    "Can play pentatonic scales across two positions with accurate fingering and clean tone at a moderate tempo",
+    "Can improvise an 8- to 12-bar blues melodic phrase using pentatonic scales over a looped backing track",
+    "Can create and overdub at least one loop on the loop pedal, layering a rhythm track with a melodic pentatonic phrase",
+    "Can switch between pentatonic scale positions smoothly while staying in key",
+    "Maintains guitar tuning during practice using the tuner"
+  ],
+  "target_weeks": 8,
+  "minutes_per_day": 30,
+  "days_per_week": 5,
+  "motivation": "Intrinsic motivation to develop melodic guitar playing with looping for blues-inspired improvisation.",
+  "constraints": [
+    "Beginner level",
+    "8-week horizon",
+    "Equipment available: electric guitar, amplifier, loop pedal, tuner, cable, picks, strap",
+    "No prior formal training in guitar or music theory"
+  ],
+  "assumptions": [
+    "Practices 30 minutes per day, 5 days per week",
+    "Access to loop pedal capable of recording, overdubbing, and playback",
+    "Standard tuning and basic amp settings assumed",
+    "Practice environment allows use of a metronome",
+    "No external performance requirement during the horizon"
+  ]
+}

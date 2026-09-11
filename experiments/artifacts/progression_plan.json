@@ -1,0 +1,146 @@
+{
+  "skill": "Electric guitar technique with pentatonic scales and loop pedal usage",
+  "recommended_track_id": "tp-01-foundations-pentatonic-loop",
+  "tracks": [
+    {
+      "id": "tp-01-foundations-pentatonic-loop",
+      "name": "Foundations: Pentatonic mastery and looping basics",
+      "identity_statement": "I establish clean technique, map pentatonic patterns across two positions, and create a simple loop to accompany blues ideas.",
+      "intended_outcome": "Can play pentatonic shapes in two positions with clean tone and basic loop track to accompany blues ideas.",
+      "entry_capability_ids": [
+        "cap-00-basic-technique",
+        "cap-12-timing-with-metronome",
+        "cap-06-loop-pedal-basic_operation",
+        "cap-16-tuning-stability_with-tuner",
+        "cap-15-safe_practice_ergonomics"
+      ],
+      "milestone_capability_groups": [
+        [
+          "cap-02-map-pentatonic-patterns",
+          "cap-03-play-two-positions"
+        ],
+        [
+          "cap-07-record_loop_basic",
+          "cap-06-loop-pedal-basic_operation",
+          "cap-12-timing-with-metronome"
+        ],
+        [
+          "cap-10-add-melodic-phrase_over_loop",
+          "cap-05-key-stability"
+        ]
+      ],
+      "branch_after_tier": 2,
+      "exit_capability_ids": [
+        "cap-10-add-melodic-phrase_over_loop",
+        "cap-12-timing-with-metronome"
+      ],
+      "rationale": "Establishes a solid foundation: pentatonic shapes, two-position fluency, and the ability to create a simple loop for blues context before introducing more complex looping and improvisation."
+    },
+    {
+      "id": "tp-02-blues-improv-loop",
+      "name": "Blues improvisation over loop",
+      "identity_statement": "I improvise blues phrases over a looped backing using pentatonic shapes, apply muting and voice-leading, and maintain key.",
+      "intended_outcome": "Can improvise 8–12 bar blues melodies over a loop with proper phrasing and muting; make use of backing track context.",
+      "entry_capability_ids": [
+        "cap-04-smooth-position-transitions",
+        "cap-02-map-pentatonic-patterns",
+        "cap-05-key-stability",
+        "cap-12-timing-with-metronome",
+        "cap-06-loop-pedal-basic_operation",
+        "cap-16-tuning-stability_with_tuner",
+        "cap-15-safe_practice_ergonomics",
+        "cap-07-record_loop_basic"
+      ],
+      "milestone_capability_groups": [
+        [
+          "cap-07-record_loop_basic",
+          "cap-06-loop-pedal-basic_operation",
+          "cap-12-timing-with-metronome"
+        ],
+        [
+          "cap-08-overdub_loop_simple",
+          "cap-10-add-melodic-phrase_over_loop",
+          "cap-09-layer_rhythm_lead_loops"
+        ],
+        [
+          "cap-11-improvise-blues_8_12_bars",
+          "cap-21-use_voice_leading_with_shapes",
+          "cap-25-tonal_center_and_key"
+        ]
+      ],
+      "branch_after_tier": 2,
+      "exit_capability_ids": [
+        "cap-11-improvise-blues_8_12_bars",
+        "cap-25-tonal_center_and_key",
+        "cap-22-complete_loop_flow_sequence"
+      ],
+      "rationale": "Progresses from loop construction to authentic blues improvisation, incorporating pentatonic shapes, backing track context, and voice-leading within the blues framework."
+    },
+    {
+      "id": "tp-03-loop-performance",
+      "name": "Complete loop flow: rhythm + lead chain",
+      "identity_statement": "I orchestrate a full looping performance: rhythm and lead loops; playback; safety; analysis; and performance readiness.",
+      "intended_outcome": "Complete loop performance: rhythm + lead chain; playback; and reflective practice to improve timing and dynamics.",
+      "entry_capability_ids": [
+        "cap-07-record_loop_basic",
+        "cap-08-overdub_loop_simple",
+        "cap-09-layer_rhythm_lead_loops",
+        "cap-12-timing-with-metronome",
+        "cap-23-safety_feedback",
+        "cap-16-tuning-stability_with_tuner",
+        "cap-15-safe_practice_ergonomics"
+      ],
+      "milestone_capability_groups": [
+        [
+          "cap-07-record_loop_basic",
+          "cap-08-overdub_loop_simple",
+          "cap-09-layer_rhythm_lead_loops",
+          "cap-22-complete_loop_flow_sequence"
+        ],
+        [
+          "cap-23-safety_feedback",
+          "cap-28-creative_dynamics_control"
+        ],
+        [
+          "cap-27-record_analyze_loop_performance"
+        ]
+      ],
+      "branch_after_tier": 3,
+      "exit_capability_ids": [
+        "cap-22-complete_loop_flow_sequence",
+        "cap-27-record_analyze_loop_performance",
+        "cap-23-safety_feedback"
+      ],
+      "rationale": "Consolidates foundational skills into a full, performable loop chain, with emphasis on dynamics, safety, performance readiness, and post-practice analysis."
+    }
+  ],
+  "shared_foundation_capability_ids": [
+    "cap-00-basic-technique",
+    "cap-12-timing-with-metronome",
+    "cap-06-loop-pedal-basic_operation",
+    "cap-16-tuning-stability_with_tuner",
+    "cap-15-safe_practice_ergonomics"
+  ],
+  "branch_points": [
+    "cap-04-smooth-position-transitions",
+    "cap-11-improvise-blues_8_12_bars",
+    "cap-22-complete_loop_flow_sequence"
+  ],
+  "sequencing_rationale": [
+    "Begin with foundational technique and pentatonic mapping to ensure clean fretting and reliable navigation of the fretboard.",
+    "Introduce loop mechanics and timing alignment for a stable backing context before adding melodic content.",
+    "Progress to blues improvisation within a looping context, emphasizing phrasing, key stability, and voice-leading.",
+    "Culminate in a full loop performance that integrates rhythm, lead, safety, and reflective analysis."
+  ],
+  "pacing_rationale": [
+    "8-week horizon with 30 minutes/day necessitates gradual milestones: early weeks solidify technique and patterns; mid weeks integrate looping with blues; final weeks consolidate into a performable loop chain and self-review.",
+    "Branching allows a learner to deepen either the blues- improvisation track or the complete loop performance track after establishing core skills, ensuring meaningful progression rather than arbitrary difficulty."
+  ],
+  "assumptions": [
+    "Practices 30 minutes per day, 5 days per week, for 8 weeks.",
+    "Access to a loop pedal capable of recording, overdubbing, and playback.",
+    "Standard tuning and basic amp settings assumed.",
+    "Practice environment allows use of a metronome.",
+    "No external performance requirement during the horizon."
+  ]
+}
