@@ -229,6 +229,7 @@ class LadderPackage(BaseModel):
     ladder: Ladder
     quest_set: QuestSet
 
+
 class Verdict(BaseModel):
     quest_id: str
     evidence_status: Literal[
