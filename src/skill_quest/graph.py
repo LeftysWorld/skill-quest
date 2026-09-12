@@ -2,7 +2,7 @@ from skill_quest import config  # noqa: F401  (loads .env)
 
 from langgraph.graph import END, START, StateGraph
 
-from skill_quest.nodes import run_goal_agent, run_research_agent
+from skill_quest.nodes import run_goal_agent, run_research_agent, run_capability_agent
 from skill_quest.state import LearnerState
 
 
@@ -11,10 +11,12 @@ def build_graph(checkpointer=None):
 
     builder.add_node("goal", run_goal_agent)
     builder.add_node("research", run_research_agent)
+    builder.add_node("capability_mapper", run_capability_agent)
 
     builder.add_edge(START, "goal")
     builder.add_edge("goal", "research")
-    builder.add_edge("research", END)
+    builder.add_edge("research", "capability_mapper")
+    builder.add_edge("capability_mapper", END)
 
     return builder.compile(checkpointer=checkpointer)
 
