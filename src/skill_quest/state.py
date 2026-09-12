@@ -1,0 +1,19 @@
+from __future__ import annotations
+
+from typing import Annotated, Any, TypedDict
+
+from langchain_core.messages import AnyMessage
+from langgraph.graph.message import add_messages
+
+
+class LearnerState(TypedDict, total=False):
+    messages: Annotated[list[AnyMessage], add_messages]
+
+    user_request: str
+    learner_context: dict[str, Any]
+
+    goal: dict[str, Any]
+    skill_dossier: dict[str, Any]
+
+    current_stage: str
+    error: str | None

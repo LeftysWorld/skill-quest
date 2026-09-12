@@ -1,7 +1,7 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "agent": "./experiments/08_critic.py:agent"
+    "agent": "skill_quest.graph:graph"
   },
   "env": ".env"
 }
