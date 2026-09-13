@@ -8,6 +8,8 @@ from skill_quest.research.agent import agent as research_agent
 from skill_quest.research.models import ResearchInput, SkillDossier
 from skill_quest.capability.agent import agent as capability_agent
 from skill_quest.capability.models import CapabilityMappingInput, CapabilityMap
+from skill_quest.progression.models import ProgressionInput
+from skill_quest.progression.agent import agent as progression_agent
 from skill_quest.state import LearnerState
 
 
@@ -134,3 +136,38 @@ def run_capability_agent(state: LearnerState) -> dict:
         "current_stage": "capabilities_mapped",
         "error": None,
     }
+
+def run_progression_planner(state: LearnerState) -> dict:
+    goal = SkillGoal.model_validate(state["goal"])
+    capabilities = CapabilityMap.model_validate(state["capability_map"]).capabilities
+
+    progression_input = ProgressionInput(
+        goal=goal,
+        capabilities=capabilities
+    )
+
+    result = progression_agent.invoke(
+        {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": "Progression the supplied skill goal.",
+                }
+            ]
+        },
+        context=progression_input,
+    )
+
+    progression_plan =result["structured_response"]
+
+    return {
+        "progression_plan": progression_plan.model_dump(),
+        "current_stage": "progression_planned",
+        "messages": [
+            AIMessage(
+                content=f"Progression Plan complete: {progression_plan}"
+            )
+        ],
+        "error": None,
+    }
+

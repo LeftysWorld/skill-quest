@@ -1,7 +1,5 @@
 from langchain.agents.middleware import ModelRequest, dynamic_prompt
 
-from skill_quest.capability.models import CapabilityMappingInput
-
 
 @dynamic_prompt
 def capability_mapper_prompt(request: ModelRequest) -> str:

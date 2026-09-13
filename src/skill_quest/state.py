@@ -15,6 +15,8 @@ class LearnerState(TypedDict, total=False):
     goal: dict[str, Any]
     skill_dossier: dict[str, Any]
     capability_map: dict[str, Any]
+    progression_plan: dict[str, Any]
+    selected_track_id: str | None
 
     current_stage: str
     error: str | None

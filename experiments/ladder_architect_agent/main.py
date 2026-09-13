@@ -13,7 +13,7 @@ from pydantic import BaseModel, Field
 from pydantic_ai import Agent
 
 # --- config ---
-load_dotenv("../.env")
+load_dotenv("../../.env")
 
 Settings.embed_model = OpenAIEmbedding(model="text-embedding-3-small")
 Settings.llm = OpenAI(model="gpt-4o-mini", temperature=0)
