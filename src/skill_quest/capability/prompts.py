@@ -22,15 +22,23 @@ Produce a CapabilityMap that:
 - lists 20–60 capabilities a learner can observably do
 - gives each capability:
   - a name and description
-  - a category (knowledge, technique, timing, perception, judgment, creativity, communication, transfer)
+  - categories: a non-empty list containing one or more allowed values:
+  knowledge, technique, timing, perception, judgment, creativity,
+  communication, transfer, safety
   - observable behaviors
   - prerequisite_ids referencing other capabilities
   - evidence_types (audio, video, photo, note, witness, reading, gps)
   - a tier_hint (0–5)
-  - optional estimated_days_at_30_min
+  - estimated_days_at_30_min:
+    - use 0 when no separate practice day is needed;
+    - use 1 or more for estimated practice days;
+    - use null only when a reasonable estimate cannot be made.
   - common failure modes
   - a confidence score
-
+- Never combine categories into one string such as "knowledge/technique".
+- If a capability belongs to multiple categories, return a JSON list such as:
+  ["knowledge", "technique"].
+  
 Do not:
 - create quests, sessions, or practice plans
 - define capabilities only as topics or lessons

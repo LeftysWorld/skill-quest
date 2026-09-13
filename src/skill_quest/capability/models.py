@@ -12,6 +12,7 @@ class CapabilityCategory(StrEnum):
     CREATIVITY = "creativity"
     COMMUNICATION = "communication"
     TRANSFER = "transfer"
+    SAFETY = "safety"
 
 
 class EvidenceType(StrEnum):
@@ -33,12 +34,18 @@ class Capability(BaseModel):
     id: str
     name: str
     description: str
-    category: CapabilityCategory
+    categories: list[CapabilityCategory] = Field(
+        min_length=1,
+        description=(
+            "One or more applicable categories. "
+            "Use separate values, never combined strings."
+        ),
+    )
     observable_behaviors: list[str]
     prerequisite_ids: list[str] = Field(default_factory=list)
     evidence_types: list[EvidenceType]
     tier_hint: int = Field(ge=0)
-    estimated_days_at_30_min: int | None = Field(default=None, ge=1)
+    estimated_days_at_30_min: int | None = Field(default=None, ge=0)
     common_failure_modes: list[str] = Field(default_factory=list)
     confidence: float = Field(default=0.7, ge=0.0, le=1.0)
 
