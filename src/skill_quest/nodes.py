@@ -5,13 +5,15 @@ from langchain_core.messages import AIMessage
 from skill_quest.goal.agent import agent as goal_agent
 from skill_quest.goal.models import GoalInput, LearnerContext, SkillGoal
 from skill_quest.research.agent import agent as research_agent
-from skill_quest.research.models import ResearchInput, SkillDossier
+from skill_quest.research.models import ResearchInput, SkillDossier, SourceRecord
 from skill_quest.capability.agent import agent as capability_agent
 from skill_quest.capability.models import CapabilityMappingInput, CapabilityMap
 from skill_quest.progression.models import ProgressionCapability, ProgressionInput, ProgressionPlan
 from skill_quest.progression.agent import agent as progression_agent
 from skill_quest.milestone.agent import agent as milestone_agent
 from skill_quest.milestone.models import MilestoneDesignInput, MilestoneSet
+from skill_quest.ladder.agent import agent as ladder_agent
+from skill_quest.ladder.models import LadderInput, Ladder
 
 from skill_quest.state import LearnerState
 
@@ -44,41 +46,20 @@ def _latest_user_request(state: LearnerState) -> str:
     raise ValueError("No user request found in state['user_request'] or state['messages'].")
 
 def ensure_skill_goal_quality(skill_goal: SkillGoal, learner_context: LearnerContext) -> SkillGoal:
+    _defaults = [
+            ("Demonstrate the target skill in the stated context using the available equipment."),
+            ("Complete a continuous performance or practical task without stopping."),
+            ("Provide observable evidence that another person could review."),
+        ]
     success_definition = [item.strip() for item in skill_goal.success_definition
         if isinstance(item, str) and item.strip()
     ]
 
     if not success_definition:
-        success_definition = [
-            (
-                "Demonstrate the target skill in the stated context "
-                "using the available equipment."
-            ),
-            (
-                "Complete a continuous performance or practical task "
-                "without stopping."
-            ),
-            (
-                "Provide observable evidence that another person "
-                "could review."
-            ),
-        ]
+        success_definition = _defaults
 
     if len(success_definition) < 3:
-        defaults = [
-            (
-                "Demonstrate the target skill in the stated context "
-                "using the available equipment."
-            ),
-            (
-                "Complete a continuous performance or practical task "
-                "without stopping."
-            ),
-            (
-                "Provide observable evidence that another person "
-                "could review."
-            ),
-        ]
+        defaults = _defaults
 
         for item in defaults:
             if item not in success_definition:
@@ -448,6 +429,94 @@ def finalize_planning(state: LearnerState) -> dict:
                     "Planning complete. "
                     f"Created {len(milestone_design.milestones)} "
                     "milestones for your recommended track."
+                )
+            )
+        ],
+        "error": None,
+    }
+
+def run_ladder_planner(state: LearnerState) -> dict:
+    goal = SkillGoal.model_validate(state["goal"])
+    progression_plan = ProgressionPlan.model_validate(state["progression_plan"])
+    milestone_set = MilestoneSet.model_validate(state["milestone_design"])
+    dossier = SkillDossier.model_validate(state["skill_dossier"])
+    selected_track_id = state.get("selected_track_id")
+
+    if not selected_track_id:
+        raise ValueError(
+            "No selected_track_id found in learner state."
+        )
+
+    if milestone_set.track_id != selected_track_id:
+        raise ValueError(
+            "MilestoneSet.track_id does not match selected_track_id."
+        )
+
+    source_records = [SourceRecord.model_validate(source) for source in dossier.sources]
+    ladder_input = LadderInput(
+        goal=goal,
+        progression_plan=progression_plan,
+        milestones=milestone_set.milestones,
+        sources=source_records,
+        selected_track_id=selected_track_id
+    )
+
+    result = ladder_agent.invoke(
+        {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": (
+                        "Assemble the milestones into a playable ladder for the selected track."
+                    ),
+                }
+            ]
+        },
+        context=ladder_input,
+    )
+
+    ladder = result["structured_response"]
+
+    if not isinstance(ladder, Ladder):
+        ladder = Ladder.model_validate(ladder)
+
+    if ladder.goal_id != goal.id:
+        raise ValueError(
+            "Ladder.goal_id does not match the current goal ID."
+        )
+
+    if ladder.selected_track_id != selected_track_id:
+        raise ValueError(
+            "Ladder.selected_track_id does not match the selected track."
+        )
+
+    milestone_ids = {milestone.id for milestone in milestone_set.milestones}
+
+    missing_milestones = set(ladder.milestone_ids) - milestone_ids
+
+    if missing_milestones:
+        raise ValueError(
+            "Ladder references unknown milestone IDs: "
+            f"{sorted(missing_milestones)}"
+        )
+
+    source_ids = {source.id for source in source_records}
+    unknown_sources = set(ladder.sources) - source_ids
+
+    if unknown_sources:
+        raise ValueError(
+            "Ladder references unknown source IDs: "
+            f"{sorted(unknown_sources)}"
+        )
+
+    return {
+        "ladder_architect": ladder.model_dump(mode="json"),
+        "current_stage": "ladder_created",
+        "messages": [
+            AIMessage(
+                content=(
+                    "Ladder architecture complete: "
+                    f"{ladder.title}"
                 )
             )
         ],

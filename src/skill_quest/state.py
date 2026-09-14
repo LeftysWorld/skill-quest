@@ -17,6 +17,7 @@ class LearnerState(TypedDict, total=False):
     capability_map: dict[str, Any]
     progression_plan: dict[str, Any]
     milestone_design: dict[str, Any]
+    ladder_architect: dict[str, Any]
 
     selected_track_id: str | None
 

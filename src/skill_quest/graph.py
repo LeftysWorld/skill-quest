@@ -9,7 +9,8 @@ from skill_quest.nodes import (
     run_progression_planner,
     select_recommended_track,
     run_milestone_planner,
-    finalize_planning
+    finalize_planning,
+    run_ladder_planner
 )
 from skill_quest.state import LearnerState
 
@@ -24,6 +25,7 @@ def build_graph(checkpointer=None):
     builder.add_node("select_recommended_track", select_recommended_track)
     builder.add_node("milestone_design", run_milestone_planner)
     builder.add_node("finalize_planning", finalize_planning)
+    builder.add_node("ladder_architect", run_ladder_planner)
 
     builder.add_edge(START, "goal")
     builder.add_edge("goal", "research")
@@ -32,7 +34,8 @@ def build_graph(checkpointer=None):
     builder.add_edge("progression_plan", "select_recommended_track")
     builder.add_edge("select_recommended_track", "milestone_design")
     builder.add_edge("milestone_design", "finalize_planning")
-    builder.add_edge("finalize_planning", END)
+    builder.add_edge("finalize_planning", "ladder_architect")
+    builder.add_edge("ladder_architect", END)
 
     return builder.compile(
         checkpointer=checkpointer,
