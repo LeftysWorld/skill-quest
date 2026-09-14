@@ -18,8 +18,10 @@ class LearnerState(TypedDict, total=False):
     progression_plan: dict[str, Any]
     milestone_design: dict[str, Any]
     ladder_architect: dict[str, Any]
+    quest_set: dict[str, Any]
 
     selected_track_id: str | None
+    selected_quest_id: str | None
 
     current_stage: str
     error: str | None
