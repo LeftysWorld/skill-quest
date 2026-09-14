@@ -55,6 +55,15 @@ Produce a SkillGoal with:
 - constraints
 - assumptions
 
+success_definition is mandatory in meaning.
+
+Always include success_definition as a non-empty JSON array
+containing at least 3 observable conditions.
+
+Do not omit the field.
+Do not rename it.
+Do not use a single paragraph for it.
+
 Rules:
 - Use the user's request as the primary source of the desired outcome.
 - Use learner context to fill in schedule, level, equipment, and constraints.

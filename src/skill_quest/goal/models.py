@@ -46,7 +46,12 @@ class SkillGoal(BaseModel):
     skill: str
     desired_outcome: str
     target_context: str
-    success_definition: list[str]
+    success_definition: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Observable conditions another person could verify."
+        ),
+    )
     target_weeks: int = Field(ge=1)
     minutes_per_day: int = Field(gt=0)
     days_per_week: int = Field(ge=1, le=7)
