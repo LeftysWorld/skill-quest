@@ -6,10 +6,10 @@ from skill_quest.capability.models import (
     CapabilityMappingInput,
 )
 from skill_quest.capability.prompts import capability_mapper_prompt
-
+from skill_quest.llm import robust_model
 
 agent = create_agent(
-    model="gpt-5-nano",
+    model=robust_model,
     middleware=[capability_mapper_prompt],
     context_schema=CapabilityMappingInput,
     response_format=CapabilityMap,

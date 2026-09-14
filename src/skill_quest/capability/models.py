@@ -136,10 +136,7 @@ class Capability(BaseModel):
 
     @field_validator("observable_behaviors", mode="before")
     @classmethod
-    def normalize_observable_behaviors(
-        cls,
-        value: Any,
-    ) -> list[str]:
+    def normalize_observable_behaviors(cls, value: Any) -> list[str]:
         if value is None:
             return []
 

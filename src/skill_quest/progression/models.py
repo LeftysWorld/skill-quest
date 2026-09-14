@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 
-from skill_quest.capability.models import Capability, CapabilityCategory, EvidenceType
+from skill_quest.capability.models import CapabilityCategory, EvidenceType
 from skill_quest.goal.models import SkillGoal
 
 

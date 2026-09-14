@@ -10,6 +10,9 @@ from skill_quest.capability.agent import agent as capability_agent
 from skill_quest.capability.models import CapabilityMappingInput, CapabilityMap
 from skill_quest.progression.models import ProgressionCapability, ProgressionInput, ProgressionPlan
 from skill_quest.progression.agent import agent as progression_agent
+from skill_quest.milestone.agent import agent as milestone_agent
+from skill_quest.milestone.models import MilestoneDesignInput, MilestoneSet
+
 from skill_quest.state import LearnerState
 
 
@@ -40,18 +43,53 @@ def _latest_user_request(state: LearnerState) -> str:
 
     raise ValueError("No user request found in state['user_request'] or state['messages'].")
 
-def validate_skill_goal(skill_goal: SkillGoal) -> None:
-    if not skill_goal.success_definition:
-        raise ValueError(
-            "SkillGoal.success_definition must contain at least "
-            "one observable condition."
-        )
+def ensure_skill_goal_quality(skill_goal: SkillGoal, learner_context: LearnerContext) -> SkillGoal:
+    success_definition = [item.strip() for item in skill_goal.success_definition
+        if isinstance(item, str) and item.strip()
+    ]
 
-    if len(skill_goal.success_definition) < 3:
-        raise ValueError(
-            "SkillGoal.success_definition should contain at least "
-            "three observable conditions."
-        )
+    if not success_definition:
+        success_definition = [
+            (
+                "Demonstrate the target skill in the stated context "
+                "using the available equipment."
+            ),
+            (
+                "Complete a continuous performance or practical task "
+                "without stopping."
+            ),
+            (
+                "Provide observable evidence that another person "
+                "could review."
+            ),
+        ]
+
+    if len(success_definition) < 3:
+        defaults = [
+            (
+                "Demonstrate the target skill in the stated context "
+                "using the available equipment."
+            ),
+            (
+                "Complete a continuous performance or practical task "
+                "without stopping."
+            ),
+            (
+                "Provide observable evidence that another person "
+                "could review."
+            ),
+        ]
+
+        for item in defaults:
+            if item not in success_definition:
+                success_definition.append(item)
+
+            if len(success_definition) >= 3:
+                break
+
+    skill_goal.success_definition = success_definition
+
+    return skill_goal
 
 def run_goal_agent(state: LearnerState) -> dict:
     user_request = _latest_user_request(state)
@@ -82,7 +120,10 @@ def run_goal_agent(state: LearnerState) -> dict:
     if not isinstance(skill_goal, SkillGoal):
         skill_goal = SkillGoal.model_validate(skill_goal)
 
-    validate_skill_goal(skill_goal)
+    skill_goal = ensure_skill_goal_quality(
+        skill_goal,
+        learner_context,
+    )
 
     return {
         "user_request": user_request,
@@ -182,17 +223,21 @@ def run_capability_agent(state: LearnerState) -> dict:
             mode="json"
         ),
         "current_stage": "capabilities_mapped",
+        "messages": [
+            AIMessage(
+                content=(
+                    "Capability mapping complete. "
+                    f"{len(capability_map.capabilities)} "
+                    "capabilities identified."
+                )
+            )
+        ],
         "error": None,
     }
 
 def run_progression_planner(state: LearnerState) -> dict:
-    goal = SkillGoal.model_validate(
-        state["goal"]
-    )
-
-    capability_map = CapabilityMap.model_validate(
-        state["capability_map"]
-    )
+    goal = SkillGoal.model_validate(state["goal"])
+    capability_map = CapabilityMap.model_validate(state["capability_map"])
 
     progression_capabilities = [
         ProgressionCapability(
@@ -298,6 +343,111 @@ def select_recommended_track(state: LearnerState) -> dict:
                     f"{selected_track.name}. "
                     f"Outcome: "
                     f"{selected_track.intended_outcome}"
+                )
+            )
+        ],
+        "error": None,
+    }
+
+def run_milestone_planner(state: LearnerState) -> dict:
+    goal = SkillGoal.model_validate(state["goal"])
+    capability_map = CapabilityMap.model_validate(state["capability_map"])
+    progression_plan = ProgressionPlan.model_validate(state["progression_plan"])
+    selected_track_id = state.get("selected_track_id")
+
+    if not selected_track_id:
+        raise ValueError(
+            "No selected_track_id found in learner state."
+        )
+
+    progression_capabilities = [
+        ProgressionCapability(
+            id=capability.id,
+            name=capability.name,
+            categories=capability.categories,
+            observable_behaviors=capability.observable_behaviors,
+            prerequisite_ids=capability.prerequisite_ids,
+            tier_hint=capability.tier_hint,
+        )
+        for capability in capability_map.capabilities
+    ]
+
+    milestone_input = MilestoneDesignInput(
+        goal=goal,
+        capabilities=progression_capabilities,
+        progression_plan=progression_plan,
+        selected_track_id=selected_track_id
+    )
+
+    result = milestone_agent.invoke(
+        {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": "Create milestone planner for the selected progression track."
+                }
+            ]
+        },
+        context=milestone_input,
+    )
+
+    milestone_set = result["structured_response"]
+
+    if not isinstance(milestone_set, MilestoneSet):
+        milestone_set = MilestoneSet.model_validate(
+            milestone_set
+        )
+
+    if milestone_set.track_id != selected_track_id:
+        raise ValueError(
+            "MilestoneSet.track_id does not match "
+            "selected_track_id."
+        )
+
+    if not milestone_set.milestones:
+        raise ValueError(
+            "Milestone Designer returned no milestones."
+        )
+
+    invalid_track_ids = [milestone.id for milestone in milestone_set.milestones
+                         if milestone.track_id != selected_track_id]
+
+    if invalid_track_ids:
+        raise ValueError(
+            "Milestones with incorrect track_id: "
+            f"{invalid_track_ids}"
+        )
+
+    return {
+        "milestone_design": milestone_set.model_dump(
+            mode="json"
+        ),
+        "current_stage": "milestone_planned",
+        "messages": [
+            AIMessage(
+                content=(
+                    "Milestone design complete: "
+                    f"{len(milestone_set.milestones)} "
+                    "milestones created."
+                )
+            )
+        ],
+        "error": None,
+    }
+
+def finalize_planning(state: LearnerState) -> dict:
+    milestone_design = MilestoneSet.model_validate(
+        state["milestone_design"]
+    )
+
+    return {
+        "current_stage": "planning_complete",
+        "messages": [
+            AIMessage(
+                content=(
+                    "Planning complete. "
+                    f"Created {len(milestone_design.milestones)} "
+                    "milestones for your recommended track."
                 )
             )
         ],
